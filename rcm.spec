@@ -1,7 +1,7 @@
 Summary:	rc file (dotfile) management
 Name:		rcm
 Version:	1.2.3
-Release:	0
+Release:	1
 License:	BSD
 Group:		Development/Tools
 Source0:	https://thoughtbot.github.io/rcm/dist/%{name}-%{version}.tar.gz
@@ -22,12 +22,10 @@ rc file (dotfile) management.
 %{__automake}
 %{__autoconf}
 %configure
-
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
